@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :trips do
-    resources :destinations
+    resources :destinations, controller: 'trip_destinations'
     resources :users
   end
   resources :destinations
