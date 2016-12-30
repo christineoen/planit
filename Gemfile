@@ -30,6 +30,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'binding_of_caller' # for better_errors
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
 end

@@ -1,4 +1,4 @@
-<%= form_for(trip) do |f| %>
+<%= form_for([user, trip]) do |f| %>
   <% if trip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
@@ -10,6 +10,13 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="text-uppercase">Name</h4>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

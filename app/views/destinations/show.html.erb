@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+  <div class="col-sm-3">
+    Name: <%= @destination.name %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_destination_path(@destination) %> |
 <%= link_to 'Back', destinations_path %>

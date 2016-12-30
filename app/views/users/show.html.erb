@@ -2,9 +2,26 @@
 
 <div class="row">
   <div class="col-sm-3">
-    Name: <%= @user.name %>
+    User Name: <%= @user.name %>
   </div>
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="row">
+  <h4>Trips</h4>
+  <% @user.trips.each do |trip| %>
+    <div class="row">
+      <div class="col-sm-3">
+        Trip Name: <%= link_to trip.name, trip %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <%= link_to 'New Trip', new_user_trip_path(@user) %>
+</div>
+
+<div class="row">
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>
